@@ -1,0 +1,190 @@
+
+
+
+/* NAVBAR SETTINGS */
+$logoSize : 200px;
+$lighterGreen : #83c5be;
+$darkerGreen : #006d77;
+$darkerGreenLow : rgba(0, 109, 119, 0.5);
+
+.nav{
+  background-color: white;
+}
+.navbar{
+
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  padding: 0px 100px;
+  justify-content: space-between;
+  opacity: 0.6;
+  transition: 1s all ease;
+  &:hover{
+    opacity: 1;
+  }
+
+  .navs{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .navs a{
+    width: 150px;
+    text-align: center;
+    font-size:20px;
+    font-weight: bold;
+  }
+
+  .brand{
+    display: flex;
+    align-items: center;
+    height: $logoSize;
+    width: $logoSize;
+  }
+  
+  .brand img{
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  
+  .userNavs{
+    display: flex;
+    i{
+      padding:0 50px;
+      font-size:30px;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+
+/* INDEX HEADER */
+.indexHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../public/headerimg.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  h2{
+    font-size:40px;
+    color:white;
+    text-transform: uppercase;
+  }
+  .indexHeaderBox{
+    background-color:$darkerGreenLow;
+
+    padding: 50px 50px;
+    border-radius: 5px;
+
+  }
+}
+
+
+
+/* INDEX FEATURES */
+.features{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:20px;
+  width: 100%;
+  min-height: 300px;
+  background-color:white;
+  .featureCard{
+    min-height: 300px;
+    border : 2px solid #83c5be;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:10px;
+    
+  }
+  hr{
+    width: 100%;
+    border-color : $lighterGreen;
+    opacity: 0.6;
+  }
+
+  .featureCardWrapper{
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .featureIcon{
+    font-size:72px;
+    color:$lighterGreen;
+    opacity: 0.4;
+  }
+
+  .featureDescription{
+    padding:20px 20px;
+    text-align: justify;
+    font-weight:300;
+
+  }
+
+  .featureTitle{
+    padding:20px 0px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+/* FOR MOBILE */
+
+$breakpoint-phone : 1000px;
+$logoSizeForMobile : 150px;
+
+@media (max-width: $breakpoint-phone) {
+
+    .navbar{
+      padding: 0 20px;
+      .userNavs{
+        i{
+          font-size:24px;
+          padding: 0 20px;
+        }
+      }
+      .brand{
+        height: $logoSizeForMobile;
+        width: $logoSizeForMobile;
+      }
+      .navs{
+        display:none;
+      }
+    }
+
+
+    .features{
+      flex-direction: column;
+      .featureCardWrapper{
+        margin-bottom:20px;
+        padding:0 10px;
+      }
+    }
+
+
+
+
+}
+
